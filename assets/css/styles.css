@@ -39,6 +39,12 @@ body {
     font-weight: bold;
 }
 
+.wip {
+    border: 1px solid red;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    padding:0.5rem;
+}
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -48,8 +54,13 @@ body {
     width: 48%;
 }
 
+.left-container h2 {
+    animation: fadeInTop 2.5s ease-in-out;
+}
+
 .left-container p {
     margin-top: 2rem;
+    animation: fadeInRight 1.5s ease-in-out;
 }
 
 .right-container {
@@ -63,7 +74,55 @@ body {
     max-width: 100%;
     border-radius: 10px;
     filter: grayscale(100%);
+    animation: fadeInLeft 1.5s ease-in-out;
 }
+
+.profile-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+
+.profile-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @media (max-width: 768px) {
     .main-container {
