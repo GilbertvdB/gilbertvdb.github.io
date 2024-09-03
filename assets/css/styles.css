@@ -48,6 +48,10 @@ body {
     width: 48%;
 }
 
+.left-container p {
+    margin-top: 2rem;
+}
+
 .right-container {
     width: 48%;
     display: flex;
